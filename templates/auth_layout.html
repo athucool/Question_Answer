@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+        html,body {
+            font-family: 'Sofia';
+        }
+        .auth-box{
+            border:3px solid lightblue;
+            border-radius: 10px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 600px;
+            margin: auto;
+        }
+        .login-form-container{
+            width: 300px;
+            margin: auto;
+        }
+        .Registration-form-container{
+            width: 600px;
+            margin: auto;
+        }
+</style>
+{% endblock style %}
+ 
+{% block content %}
+    <div class="mt-2">
+        <div class="auth-box text-center">
+            {% block body_block %}
+            
+            {% endblock body_block %}
+
+        </div>
+    </div>
+{% endblock %}
+

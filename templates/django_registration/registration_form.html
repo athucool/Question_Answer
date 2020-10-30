@@ -1,0 +1,14 @@
+{% extends 'auth_layout.html' %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+    <h4>Account Registration</h4>
+    <div class="Registration-form-container">
+        <form method="POST" class="form">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+            <p class="mt-1">Or <a href="{% url 'login' %}">Login</a></p>
+
+    </div>
+{% endblock body_block %}
